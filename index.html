@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>BMS | 부천 최대 규모 드럼 연습실</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="naver-site-verification" content="97b3a17b35532d2ebf1e94beb64d66ad8332c007" />
+  <meta name="google-site-verification" content="fU7Ksp__05HSQM_PKKUviUt8haP9LV0L3MrWdFVG8vQ" />
+
+  <!-- 파비콘 설정 -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/fav.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/fav.png">
+</head>
+<body>
+  <!-- 최상단 헤더 -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">
+          <picture>
+            <!-- 모바일 전용 (768px 이하일 때 logo3.png 사용) -->
+            <source srcset="images/logo3.png" media="(max-width: 768px)">
+            <!-- 기본 (데스크탑 등 큰 화면에서는 logo.png 사용) -->
+            <img src="images/logo.png" alt="BMS 로고">
+          </picture>
+        </a>
+      </div>
+      <nav class="nav-menu">
+        <a href="#rooms">방 소개</a>
+        <a href="#map">오시는길</a>
+        <a href="https://booking.naver.com/booking/10/bizes/1516998" target="_blank">방 예약현황</a>        
+        <a href="#cont">레슨문의</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 메인 캐러셀 -->
+  <section class="carousel">
+    <div class="slides">
+      <div class="slide"><img src="images/slide1.png" alt="사진 1"></div>
+      <div class="slide"><img src="images/slide2.png" alt="사진 2"></div>
+      <div class="slide"><img src="images/slide3.png" alt="사진 3"></div>      
+      <div class="slide"><img src="images/slide4.png" alt="사진 4"></div>
+    </div>
+    <div class="caption-bar">부천 지상 최대 규모 프리미엄 연습실</div>
+    <button class="arrow prev">&#10094;</button>
+    <button class="arrow next">&#10095;</button>
+  </section>
+
+  <section id="rooms"></section>
+  <hr style="margin: 40px 0; border: none; border-top: 1px solid #ccc;">
+
+  <!-- 방 소개 (풀-블리드 갈색 배경 + 내부 중앙 정렬) -->
+  <section class="room-section">
+    <div class="room-inner">
+      <h2>방 소개</h2>
+
+      <!-- 버튼 영역 -->
+      <div class="room-selector">
+        <label for="roomSelector">방 선택:</label>
+        <select id="roomSelector">
+          <option value="1">Room 1</option>
+          <option value="2">Room 2, 3</option>
+          <option value="3">Room 4</option>
+          <option value="4">Room 5</option>
+          <option value="5">Room 6, 7, 8</option>
+          <option value="6">Room 9</option>
+          <option value="7">Room 10, 11</option>
+          <option value="8">Room 12</option>
+          <option value="9">Room 13</option>
+          <option value="10">Room 14, 15</option>
+          <option value="11">Room 16</option>
+          <option value="12">Room 17</option>
+        </select>
+      </div>
+
+      <!-- 사진 + 스펙 -->
+      <div class="room-content">
+        <!-- 사진 영역 -->
+        <div class="room-carousel">
+          <!-- Room1 -->
+          <div class="room-slides" id="room1">
+            <div class="room-slide active">
+              <img src="images/room1.jpg" alt="Room1">
+            </div>
+            <button class="room-arrow prev">&#10094;</button>
+            <button class="room-arrow next">&#10095;</button>
+          </div>
+
+          <!-- Room2 -->
+          <div class="room-slides hidden" id="room2">
+            <div class="room-slide active">
+              <img src="images/room2_3.jpg" alt="Room2">
+            </div>
+            <button class="room-arrow prev">&#10094;</button>
+            <button class="room-arrow next">&#10095;</button>
+          </div>
+
+          <!-- Room3 -->
+          <div class="room-slides hidden" id="room3">
+            <div class="room-slide active">
+              <img src="images/room4.jpg" alt="Room3">
+            </div>
+            <button class="room-arrow prev">&#10094;</button>
+            <button class="room-arrow next">&#10095;</button>
+          </div>
+
+          <!-- Room4 -->
+          <div class="room-slides hidden" id="room4">
+            <div class="room-slide active">
+              <img src="images/room5.jpg" alt="Room4">
+            </div>
+            <button class="room-arrow prev">&#10094;</button>
+            <button class="room-arrow next">&#10095;</button>
+          </div>
+
+          <!-- Room5 -->
+          <div class="room-slides hidden" id="room5">
+            <div class="room-slide active">
+              <img src="images/room6_7_8.jpg" alt="Room5">
+            </div>
+            <button class="room-arrow prev">&#10094;</button>
+            <button class="room-arrow next">&#10095;</button>
+          </div>
+
+          <!-- Room6 -->
+          <div class="room-slides hidden" id="room6">
+            <div class="room-slide active">
+              <img src="images/room9.jpg" alt="Room6">
+            </div>
+            <button class="room-arrow prev">&#10094;</button>
+            <button class="room-arrow next">&#10095;</button>
+          </div>
+
+          <!-- Room7 -->
+          <div class="room-slides hidden" id="room7">
+            <div class="room-slide active">
+              <img src="images/room10_11.jpg" alt="Room7">
+            </div>
+            <button class="room-arrow prev">&#10094;</button>
+            <button class="room-arrow next">&#10095;</button>
+          </div>
+
+          <!-- Room8 -->
+          <div class="room-slides hidden" id="room8">
+            <div class="room-slide active">
+              <img src="images/room12.jpg" alt="Room8">
+            </div>
+            <button class="room-arrow prev">&#10094;</button>
+            <button class="room-arrow next">&#10095;</button>
+          </div>
+
+          <!-- Room9 -->
+          <div class="room-slides hidden" id="room9">
+            <div class="room-slide active">
+              <img src="images/room13.jpg" alt="Room9">
+            </div>
+            <button class="room-arrow prev">&#10094;</button>
+            <button class="room-arrow next">&#10095;</button>
+          </div>
+
+          <!-- Room10 -->
+          <div class="room-slides hidden" id="room10">
+            <div class="room-slide active">
+              <img src="images/room14_15.jpg" alt="Room10">
+            </div>
+            <button class="room-arrow prev">&#10094;</button>
+            <button class="room-arrow next">&#10095;</button>
+          </div>
+
+          <!-- Room11 -->
+          <div class="room-slides hidden" id="room11">
+            <div class="room-slide active">
+              <img src="images/room16.jpg" alt="Room11">
+            </div>
+            <button class="room-arrow prev">&#10094;</button>
+            <button class="room-arrow next">&#10095;</button>
+          </div>
+
+          <!-- Room12 -->
+          <div class="room-slides hidden" id="room12">
+            <div class="room-slide active">
+              <img src="images/room17.jpg" alt="Room12">
+            </div>
+            <button class="room-arrow prev">&#10094;</button>
+            <button class="room-arrow next">&#10095;</button>
+          </div>
+
+          <!-- Room13 -->
+          <div class="room-slides hidden" id="room13">
+            <div class="room-slide active">
+              <img src="images/room13-1.jpg" alt="Room13">
+            </div>
+            <div class="room-slide">
+              <img src="images/room13-2.jpg" alt="Room13">
+            </div>
+            <button class="room-arrow prev">&#10094;</button>
+            <button class="room-arrow next">&#10095;</button>
+          </div>
+
+          <!-- Room14 -->
+          <div class="room-slides hidden" id="room14">
+            <div class="room-slide active">
+              <img src="images/room14-1.jpg" alt="Room14">
+            </div>
+            <div class="room-slide">
+              <img src="images/room14-2.jpg" alt="Room14">
+            </div>
+            <button class="room-arrow prev">&#10094;</button>
+            <button class="room-arrow next">&#10095;</button>
+          </div>
+
+          <!-- Room15 -->
+          <div class="room-slides hidden" id="room15">
+            <div class="room-slide active">
+              <img src="images/room15-1.jpg" alt="Room15">
+            </div>
+            <div class="room-slide">
+              <img src="images/room15-2.jpg" alt="Room15">
+            </div>
+            <button class="room-arrow prev">&#10094;</button>
+            <button class="room-arrow next">&#10095;</button>
+          </div>
+
+          <!-- Room16 -->
+          <div class="room-slides hidden" id="room16">
+            <div class="room-slide active">
+              <img src="images/room16-1.jpg" alt="Room16">
+            </div>
+            <div class="room-slide">
+              <img src="images/room16-2.jpg" alt="Room16">
+            </div>
+            <button class="room-arrow prev">&#10094;</button>
+            <button class="room-arrow next">&#10095;</button>
+          </div>
+
+          <!-- Room17 -->
+          <div class="room-slides hidden" id="room17">
+            <div class="room-slide active">
+              <img src="images/room17-1.jpg" alt="Room17">
+            </div>
+            <div class="room-slide">
+              <img src="images/room17-2.jpg" alt="Room17">
+            </div>
+            <button class="room-arrow prev">&#10094;</button>
+            <button class="room-arrow next">&#10095;</button>
+          </div>
+
+          <!-- Room18 -->
+          <div class="room-slides hidden" id="room18">
+            <div class="room-slide active">
+              <img src="images/room18-1.jpg" alt="Room18">
+            </div>
+            <div class="room-slide">
+              <img src="images/room18-2.jpg" alt="Room18">
+            </div>
+            <button class="room-arrow prev">&#10094;</button>
+            <button class="room-arrow next">&#10095;</button>
+          </div>
+        </div>
+
+        <!-- 스펙 영역 -->
+        <div class="room-specs">
+          <!-- Room1 -->
+          <div class="spec" id="spec1">
+            <div class="spec-header">
+              <h3>Room1 스펙</h3>
+              <div class="spec-actions">
+                <button id="toggleAuto1">❚❚</button>
+                <a href="https://booking.naver.com/booking/10/bizes/1516998" target="_blank" class="reserve-btn">예약하기</a>
+              </div>
+            </div>
+            <ul>
+              <li>크기: 20㎡</li>
+              <li>드럼: Yamaha Stage Custom</li>
+              <li>앰프: Marshall MG 시리즈</li>
+              <li>마이크: 기본 2개</li>
+            </ul>
+          </div>
+
+          <!-- Room2 -->
+          <div class="spec hidden" id="spec2">
+            <div class="spec-header">
+              <h3>Room2, 3 스펙</h3>
+              <div class="spec-actions">
+                <button id="toggleAuto2">❚❚</button>
+                <a href="https://booking.naver.com/booking/10/bizes/1516998" target="_blank" class="reserve-btn">예약하기</a>
+              </div>
+            </div>
+            <ul>
+              <li>크기: 25㎡</li>
+              <li>드럼: Pearl Export</li>
+              <li>앰프: Fender Champion</li>
+              <li>마이크: 콘덴서 2개</li>
+            </ul>
+          </div>
+
+          <!-- Room3 -->
+          <div class="spec hidden" id="spec3">
+            <div class="spec-header">
+              <h3>Room4 스펙</h3>
+              <div class="spec-actions">
+                <button id="toggleAuto3">❚❚</button>
+                <a href="https://booking.naver.com/booking/10/bizes/1516998" target="_blank" class="reserve-btn">예약하기</a>
+              </div>
+            </div>
+            <ul>
+              <li>크기: 30㎡</li>
+              <li>드럼: Tama Superstar</li>
+              <li>앰프: Orange Crush</li>
+              <li>마이크: 4개 + 믹서</li>
+            </ul>
+          </div>
+
+          <!-- Room4 -->
+          <div class="spec hidden" id="spec4">
+            <div class="spec-header">
+              <h3>Room5 스펙</h3>
+              <div class="spec-actions">
+                <button id="toggleAuto4">❚❚</button>
+                <a href="https://booking.naver.com/booking/10/bizes/1516998" target="_blank" class="reserve-btn">예약하기</a>
+              </div>
+            </div>
+            <ul>
+              <li>크기: 4room㎡</li>
+              <li>드럼: Tama Superstar</li>
+              <li>앰프: Orange Crush</li>
+              <li>마이크: 4개 + 믹서</li>
+            </ul>
+          </div>
+
+          <!-- Room5 -->
+          <div class="spec hidden" id="spec5">
+            <div class="spec-header">
+              <h3>Room6, 7, 8 스펙</h3>
+              <div class="spec-actions">
+                <button id="toggleAuto5">❚❚</button>
+                <a href="https://booking.naver.com/booking/10/bizes/1516998" target="_blank" class="reserve-btn">예약하기</a>
+              </div>
+            </div>
+            <ul>
+              <li>크기: room5㎡</li>
+              <li>드럼: Tama Superstar</li>
+              <li>앰프: Orange Crush</li>
+              <li>마이크: 4개 + 믹서</li>
+            </ul>
+          </div>
+
+          <!-- Room6 -->
+          <div class="spec hidden" id="spec6">
+            <div class="spec-header">
+              <h3>Room9 스펙</h3>
+              <div class="spec-actions">
+                <button id="toggleAuto6">❚❚</button>
+                <a href="https://booking.naver.com/booking/10/bizes/1516998" target="_blank" class="reserve-btn">예약하기</a>
+              </div>
+            </div>
+            <ul>
+              <li>크기: 306㎡</li>
+              <li>드럼: Tama Superstar</li>
+              <li>앰프: Orange Crush</li>
+              <li>마이크: 4개 + 믹서</li>
+            </ul>
+          </div>
+
+          <!-- Room7 -->
+          <div class="spec hidden" id="spec7">
+            <div class="spec-header">
+              <h3>Room10, 11 스펙</h3>
+              <div class="spec-actions">
+                <button id="toggleAuto7">❚❚</button>
+                <a href="https://booking.naver.com/booking/10/bizes/1516998" target="_blank" class="reserve-btn">예약하기</a>
+              </div>
+            </div>
+            <ul>
+              <li>크기: 307㎡</li>
+              <li>드럼: Tama Superstar</li>
+              <li>앰프: Orange Crush</li>
+              <li>마이크: 4개 + 믹서</li>
+            </ul>
+          </div>
+
+          <!-- Room8 -->
+          <div class="spec hidden" id="spec8">
+            <div class="spec-header">
+              <h3>Room12 스펙</h3>
+              <div class="spec-actions">
+                <button id="toggleAuto8">❚❚</button>
+                <a href="https://booking.naver.com/booking/10/bizes/1516998" target="_blank" class="reserve-btn">예약하기</a>
+              </div>
+            </div>
+            <ul>
+              <li>크기: 30㎡8</li>
+              <li>드럼: Tama Superstar</li>
+              <li>앰프: Orange Crush</li>
+              <li>마이크: 4개 + 믹서</li>
+            </ul>
+          </div>
+
+          <!-- Room9 -->
+          <div class="spec hidden" id="spec9">
+            <div class="spec-header">
+              <h3>Room13 스펙</h3>
+              <div class="spec-actions">
+                <button id="toggleAuto9">❚❚</button>
+                <a href="https://booking.naver.com/booking/10/bizes/1516998" target="_blank" class="reserve-btn">예약하기</a>
+              </div>
+            </div>
+            <ul>
+              <li>크기: 309㎡</li>
+              <li>드럼: Tama Superstar</li>
+              <li>앰프: Orange Crush</li>
+              <li>마이크: 4개 + 믹서</li>
+            </ul>
+          </div>
+
+          <!-- Room10 -->
+          <div class="spec hidden" id="spec10">
+            <div class="spec-header">
+              <h3>Room14, 15 스펙</h3>
+              <div class="spec-actions">
+                <button id="toggleAuto10">❚❚</button>
+                <a href="https://booking.naver.com/booking/10/bizes/1516998" target="_blank" class="reserve-btn">예약하기</a>
+              </div>
+            </div>
+            <ul>
+              <li>크기: 30㎡10</li>
+              <li>드럼: Tama Superstar</li>
+              <li>앰프: Orange Crush</li>
+              <li>마이크: 4개 + 믹서</li>
+            </ul>
+          </div>
+
+          <!-- Room11 -->
+          <div class="spec hidden" id="spec11">
+            <div class="spec-header">
+              <h3>Room16 스펙</h3>
+              <div class="spec-actions">
+                <button id="toggleAuto11">❚❚</button>
+                <a href="https://booking.naver.com/booking/10/bizes/1516998" target="_blank" class="reserve-btn">예약하기</a>
+              </div>
+            </div>
+            <ul>
+              <li>크기: 30㎡11</li>
+              <li>드럼: Tama Superstar</li>
+              <li>앰프: Orange Crush</li>
+              <li>마이크: 4개 + 믹서</li>
+            </ul>
+          </div>
+
+          <!-- Room12 -->
+          <div class="spec hidden" id="spec12">
+            <div class="spec-header">
+              <h3>Room17 스펙</h3>
+              <div class="spec-actions">
+                <button id="toggleAuto12">❚❚</button>
+                <a href="https://booking.naver.com/booking/10/bizes/1516998" target="_blank" class="reserve-btn">예약하기</a>
+              </div>
+            </div>
+            <ul>
+              <li>크기: 30㎡12</li>
+              <li>드럼: Tama Superstar</li>
+              <li>앰프: Orange Crush</li>
+              <li>마이크: 4개 + 믹서</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="map"></section>
+  <hr style="margin: 40px 0; border: none; border-top: 1px solid #ccc;">
+
+  <!-- 오시는 길 -->
+  <section class="map-section">
+    <h2>오시는 길</h2>
+    <div class="map-container">
+      <a href="https://map.naver.com/p/entry/place/2076961351" target="_blank" rel="noopener">
+        <picture>
+          <!-- 모바일 전용 (768px 이하일 때 map4.png 사용) -->
+          <source srcset="images/map4.png" media="(max-width: 768px)">
+          <!-- 기본 (데스크탑 등 큰 화면에서는 map2.png 사용) -->
+          <img src="images/map2.png" alt="네이버 지도 - 오시는 길">
+        </picture>
+      </a>
+      <div class="map-info">
+        <p class="address">
+          주소: 경기도 부천시 소사구 경인로 110 5층, 6층 BMS 음악연습실
+        </p>
+        <p>지하철: 1호선 중동역 도보 5분</p>
+        <p>주차: 지하 주차장 무료 이용 가능</p>
+
+        <!-- ✅ 지도 버튼을 map-info 안으로 이동 -->
+        <div class="map-buttons">
+          <a href="https://map.naver.com/p/entry/place/2076961351" target="_blank" class="map-btn naver">네이버지도</a>
+          <a href="https://kko.kakao.com/ZbfMhmYpwo" target="_blank" class="map-btn kakao">카카오지도</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="cont"></section>
+  <hr style="margin: 40px 0; border: none; border-top: 1px solid #ccc;">
+
+  <!-- 문의 섹션 -->
+  <section id="contact" class="contact-section">
+    <h2>연습실 월 대여 및 드럼 레슨 문의</h2>
+    <p class="contact-sub">24시간 문의 가능</p>
+
+    <div class="contact-buttons">
+      <a href="tel:0507-1392-9838" class="contact-btn phone">📞 전화</a>
+      <a href="sms:0507-1392-9838" class="contact-btn sms">💬 문자</a>
+      <a href="https://open.kakao.com/o/s18DmNRh" target="_blank" class="contact-btn kakao">💛 카카오톡</a>
+      <a href="https://www.instagram.com/bms_drumstudio/" target="_blank" class="contact-btn insta">📑 인스타그램</a>
+      <a href="https://www.youtube.com/@BMS_drumstudio" target="_blank" class="contact-btn detail">📷 유튜브</a>
+    </div>
+  </section>
+
+  <!-- 하단 -->
+  <footer class="footer">
+    <div class="inner">
+      <div>
+        <img class="ftr_logo" src="images/logo2.png" alt="BMS 로고">
+      </div>
+      <div class="info">
+        <ul>
+          <li>회사명 : 부천음악연습실(BMS)</li>
+          <li>대표자 : 최원준</li>
+          <li>주소 : 경기도 부천시 소사구 경인로 110 5층, 6층</li>
+          <li>전화 : 0507-1392-9838</li>
+          <li>사업자등록번호 : 644-15-02796</li>
+        </ul>
+      </div>
+      <p>COPYRIGHT (c) 부천음악연습실(BMS) ALL RIGHTS RESERVED.</p>
+      <p>저작권 관련 수정 필요 내용이 있을 경우 문자 혹은 전화로 연락주시면 최대한 빠르게 수정 진행하겠습니다.</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
+
+<!-- 웹개발 디자인은 솔루션 비제트와 함께합니다.-->>
