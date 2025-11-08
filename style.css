@@ -189,6 +189,9 @@ body {
 }
 
 /* 문의 섹션 */
+.concon {
+  background-color: #2e2e2e;
+}
 .contact-section {
   max-width: 800px; margin: 80px auto;
   padding: 40px 20px; background: #F9F9F9;
@@ -326,8 +329,20 @@ hr.divider {
   #location.section { flex-direction: column; gap: 20px; }
 
   /* 4. 오시는 길 사진과 글상자 가로폭 동일 */
-  .location-carousel, #location .textbox {
+  .location-carousel {
     width: 100%;
+    margin: 0;
+    aspect-ratio: auto;
+    height: auto;
+  }
+  .location-carousel img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .textbox {
+    width: 80%;
     margin: 0;
   }
 
@@ -346,9 +361,9 @@ hr.divider {
 
   /* 6. iframe 세로 스크롤 제거 */
   iframe {
-    width: 110%;
-    transform: translateX(-5%);
-    height: 2340px;
+    width: 105%;
+    transform: translateX(-2.5%);
+    height: 3000px;
     border: none;
     overflow: hidden;
   }

@@ -326,7 +326,7 @@
     <div class="textbox">
       <h2>17번 방</h2>
 <p>- 4300*2780 <br>- 창문 O <br>- 흡음 패널 미네랄 울[90] 3개 설치 <br><br><br><br> 공통 스펙<br> - 다른방 간섭없는 환풍시설<br>- 바닥 플로팅 시공<br>- 오디오 인터페이스 별도 배선 시공<br>- 에어컨 및 난방 시공<br>- 기업용 초고속 인터넷<br>- 화재경보기, 감지기, 개인 소화기 설치</p>      <button id="playPauseBtn" onclick="togglePlayPause()">&#10074;&#10074;</button>
-    </div>
+    </section></div>
   </div>
 </div>
 
@@ -336,9 +336,14 @@
   <!-- Location Section -->
 <section id="location" class="section">
   <div class="location-carousel">
-    <a href="https://map.naver.com/p/entry/place/2076961351" target="_blank">
-    <img src="img/map2.png" alt="위치">
-    </a>
+<div class="location-carousel">
+  <picture>
+    <!-- 모바일일 때 -->
+    <source srcset="img/map4.png" media="(max-width: 768px)">
+    <!-- 기본 데스크탑 -->
+    <img src="img/map1.png" alt="위치">
+  </picture>
+</div>    </a>
   </div>
   <div class="textbox">
     <h2>오시는 길</h2>
@@ -358,6 +363,8 @@
 <hr class="divider">
 
   <!-- 문의 섹션 -->
+  <section id="concon" class="concon">
+    <br>
   <section id="contact" class="contact-section">
     <h2>연습실 월 대여 및 드럼 레슨 문의</h2>
     <p class="contact-sub">24시간 문의 가능</p>
@@ -372,6 +379,7 @@
       <a href="https://blog.naver.com/bucheonmusicstudio" target="_blank" class="contact-btn blog">📑 블로그</a>
     </div>
   </section>
+  
 
 <iframe 
   src="https://dnjswns1952-del.github.io/bmscon/"   
@@ -379,6 +387,7 @@
   height="1300px"                    
   style="border:none;"           >      
 </iframe>
+</section>
 
   <!-- 하단 -->
   <footer class="footer">
