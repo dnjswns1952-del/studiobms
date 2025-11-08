@@ -324,11 +324,12 @@ hr.divider {
 
   /* 3. 오시는 길 사진과 글상자 간격 */
   #location.section { flex-direction: column; gap: 20px; }
+    }
 
   /* 4. 오시는 길 사진과 글상자 가로폭 동일 */
   .location-carousel, #location .textbox {
-    width: 100%;
-    margin: 0;
+    width: 150% !important;
+    margin: 0 auto;
   }
 
   /* 5. 문의 버튼 가로 크기 글 크기에 맞게 */
@@ -346,7 +347,7 @@ hr.divider {
 
   /* 6. iframe 세로 스크롤 제거 */
   iframe {
-    width: 100%;
+    width: 150%;
     height: 2340px;
     border: none;
     overflow: hidden;
@@ -360,4 +361,3 @@ hr.divider {
 
   /* 9. 모바일에서 가로 스크롤 비활성화 */
   body { overflow-x: hidden; }
-}
