@@ -347,7 +347,7 @@ hr.divider {
   /* 6. iframe 세로 스크롤 제거 */
   iframe {
     width: 130%;
-    transform: translateX(-30%);
+    transform: translateX(-10%);
     height: 2340px;
     border: none;
     overflow: hidden;
