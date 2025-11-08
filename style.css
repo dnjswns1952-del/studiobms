@@ -272,10 +272,10 @@ body {
 hr.divider {
   border: none;
   height: 10px;
-  background-color: #000;
+  background-color: #1c1c1c;
   margin-bottom: 20px;
   width: 113.1%;
-  margin-left: -200px;
+  margin-left: -180px;
 }
 
 /* ------------------------------
