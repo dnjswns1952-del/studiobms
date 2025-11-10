@@ -363,7 +363,7 @@ hr.divider {
   iframe {
     width: 105%;
     transform: translateX(-2.5%);
-    height: 2000px;
+    height: 2200px;
     border: none;
     overflow: hidden;
   }
@@ -431,5 +431,35 @@ hr.divider {
 
   #location .textbox {
     flex: 1;              /* 지도와 동일한 높이 */
+  }
+}
+
+/* iframe을 감싸는 영역 배경색 */
+.iframe-wrapper {
+  background-color: #2e2e2e;
+  padding: 20px 0;        /* 위아래 여백 */
+}
+
+/* 공통: iframe 중앙 정렬 */
+.rooms-frame {
+  display: block;
+  margin: 0 auto;         /* 좌우 중앙 */
+  border: none;
+}
+
+/* 데스크탑 환경 */
+@media (min-width: 769px) {
+  .rooms-frame {
+    width: 100%;          /* 가로 100% */
+    max-width: 1200px;    /* 최대 가로폭 1200px */
+    height: 50vh;        /* 브라우저 세로 전체 */
+  }
+}
+
+/* 모바일 환경 */
+@media (max-width: 768px) {
+  .rooms-frame {
+    width: 100%;          /* 화면 가로 100% */
+    height: 60vh;         /* 세로는 자동 조정 */
   }
 }
