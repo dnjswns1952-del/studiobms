@@ -410,3 +410,26 @@ hr.divider {
     margin: 0 auto;   /* 글상자 자체를 가운데 */
   }
 }
+
+/* 데스크탑 환경 */
+@media (min-width: 769px) {
+  #location.section {
+    display: flex;
+    align-items: stretch; /* 글상자와 지도 높이를 동일하게 */
+    gap: 20px;
+  }
+
+  .location-carousel {
+    flex: 1;              /* 글상자와 동일한 비율로 늘어남 */
+  }
+
+  .location-carousel img {
+    width: 100%;
+    height: 100%;         /* 글상자 높이에 맞춰 채움 */
+    object-fit: cover;    /* 꽉 차게 표시 */
+  }
+
+  #location .textbox {
+    flex: 1;              /* 지도와 동일한 높이 */
+  }
+}
