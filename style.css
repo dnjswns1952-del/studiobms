@@ -438,28 +438,41 @@ hr.divider {
 .iframe-wrapper {
   background-color: #2e2e2e;
   padding: 20px 0;        /* 위아래 여백 */
+  overflow: hidden;
 }
 
-/* 공통: iframe 중앙 정렬 */
+/* 공통 스타일 */
 .rooms-frame {
   display: block;
-  margin: 0 auto;         /* 좌우 중앙 */
+  margin: 0 auto;
   border: none;
+  overflow: hidden;
 }
 
 /* 데스크탑 환경 */
 @media (min-width: 769px) {
-  .rooms-frame {
-    width: 100%;          /* 가로 100% */
-    max-width: 1200px;    /* 최대 가로폭 1200px */
-    height: 50vh;        /* 브라우저 세로 전체 */
+  .desktop-frame {
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    height: 60vh;
+  }
+  .mobile-frame {
+    display: none; /* 모바일용 iframe 숨김 */
   }
 }
 
 /* 모바일 환경 */
 @media (max-width: 768px) {
-  .rooms-frame {
-    width: 100%;          /* 화면 가로 100% */
-    height: 60vh;         /* 세로는 자동 조정 */
+  .desktop-frame {
+    display: none; /* 데스크탑용 iframe 숨김 */
+  }
+  .mobile-frame {
+    display: block;
+    width: 100%;
+    height: 90vh; /* 내용에 맞게 자동 조정 */
+    transform: scale(0.8);
+    overflow: hidden;    
+    overflow-x: hidden !important;
   }
 }

@@ -146,3 +146,14 @@ function initHamburger() {
   // HTML에서 onclick 제거했으므로 전역 등록은 선택사항
   window.toggleMenu = toggleMenu;
 }
+document.addEventListener("DOMContentLoaded", function() {
+  if (window.location.pathname.includes("rooms.html")) {
+    const target = document.getElementById("rooms");
+    if (target) {
+      // 로딩 후 500ms 딜레이를 주고 스크롤 이동
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: "smooth" });
+      }, 500);
+    }
+  }
+});
