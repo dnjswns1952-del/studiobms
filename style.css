@@ -363,7 +363,7 @@ hr.divider {
   iframe {
     width: 105%;
     transform: translateX(-2.5%);
-    height: 3000px;
+    height: 2000px;
     border: none;
     overflow: hidden;
   }
@@ -382,5 +382,31 @@ hr.divider {
   /* 1. 전체 페이지에서 가로 스크롤 비활성화 */
   html, body {
     overflow-x: hidden;   /* 가로 스크롤 숨김 */
+  }
+}
+
+@media (max-width: 768px) {
+  /* 방 사진 */
+  .room-content .room img {
+    display: block;
+    margin: 0 auto;   /* 이미지 박스 자체를 가운데 */
+  }
+
+  /* 방 설명 글상자 */
+  .room-content .textbox {
+    width: 90%;       /* 화면 폭의 90% */
+    margin: 0 auto;   /* 글상자 자체를 가운데 */
+  }
+
+  /* 지도 사진 */
+  .location-carousel {
+    width: 90%;
+    margin: 0 auto;   /* 지도 박스 자체를 가운데 */
+  }
+
+  /* 오시는 길 글상자 */
+  #location .textbox {
+    width: 90%;
+    margin: 0 auto;   /* 글상자 자체를 가운데 */
   }
 }
