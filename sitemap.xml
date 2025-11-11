@@ -1,7 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- 메인 페이지 -->
   <url>
-    <loc>https://www.studio-bms.kro.kr/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://www.studio-bms.kro.kr/index.html</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- 연습실 소개 페이지 -->
+  <url>
+    <loc>https://www.studio-bms.kro.kr/rooms.html</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
