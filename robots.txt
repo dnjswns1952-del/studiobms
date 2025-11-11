@@ -4,4 +4,4 @@ Disallow: /private/      # /private/ 디렉토리는 크롤링 금지
 Allow: /                 # 나머지는 모두 허용
 
 # 사이트맵 위치 지정
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://www.studio-bms.kro.kr/sitemap.xml
